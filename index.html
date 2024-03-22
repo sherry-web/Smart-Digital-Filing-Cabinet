@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Digital Filing Cabinet</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <header>
+        <h1>Smart Digital Filing Cabinet</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Documents</a></li>
+                <li><a href="#">Upload</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <main>
+        <!-- Document Upload Form -->
+        <section id="upload-section">
+            <h2>Upload Documents</h2>
+            <form id="upload-form">
+                <input type="file" id="file-input" accept=".pdf,.doc,.docx,.jpg,.png" multiple>
+                <button type="submit">Upload</button>
+            </form>
+        </section>
+
+        <!-- Document Display Section -->
+        <section id="documents-section">
+            <h2>My Documents</h2>
+            <div id="documents-list"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Smart Digital Filing Cabinet</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
