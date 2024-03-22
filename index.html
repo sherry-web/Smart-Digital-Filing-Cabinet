@@ -1,92 +1,105 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Digital Filing Cabinet</title>
-    <link rel="stylesheet" href="Style.css">
+    <title>DocuNest: Your Smart Document Organizer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Smart Digital Filing Cabinet</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Documents</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Logout</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>DocuNest</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Documents</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <!-- Hero Section with Document Upload -->
-        <section id="hero-section">
-            <div class="hero-content">
-                <h2>Welcome to Smart Digital Filing Cabinet</h2>
-                <p>Effortlessly organize and manage your documents. Upload your files below to get started.</p>
-                <form id="upload-form" enctype="multipart/form-data">
-                    <input type="file" id="file-input" accept=".pdf,.doc,.docx,.jpg,.png" multiple>
-                    <button type="submit">Upload</button>
-                </form>
-            </div>
-            <div class="hero-image">
-                <!-- Insert hero image here -->
-            </div>
-        </section>
+        <div class="container">
+            <div class="search-and-sort">
+                <!-- Search Functionality -->
+                <section id="search-section">
+                    <h2>Search Documents</h2>
+                    <form id="search-form">
+                        <input type="text" id="search-input" placeholder="Enter keywords...">
+                        <button type="submit">Search</button>
+                    </form>
+                </section>
 
-        <!-- Search Functionality -->
-        <section id="search-section">
-            <h2>Search Documents</h2>
-            <form id="search-form">
-                <input type="text" id="search-input" placeholder="Enter keywords...">
-                <button type="submit">Search</button>
-            </form>
-        </section>
-
-        <!-- Organizational Tools -->
-        <section id="organize-section">
-            <h2>Organize Documents</h2>
-            <div id="folders">
-                <h3>My Folders</h3>
-                <ul>
-                    <li><a href="#">Personal</a></li>
-                    <li><a href="#">Work</a></li>
-                    <li><a href="#">Projects</a></li>
-                </ul>
+                <!-- Sorting Options -->
+                <section id="sorting-section">
+                    <h2>Sort Documents</h2>
+                    <select id="sort-by">
+                        <option value="date">Date</option>
+                        <option value="name">Name</option>
+                        <option value="type">Type</option>
+                    </select>
+                </section>
             </div>
-            <div id="tags">
-                <h3>Tags</h3>
-                <ul>
-                    <li><a href="#">Important</a></li>
-                    <li><a href="#">Urgent</a></li>
-                    <li><a href="#">To Review</a></li>
-                </ul>
-            </div>
-        </section>
+          <!-- Hero Section -->
+<section id="hero-section">
+    <div class="hero-content">
+        <h2>Welcome to DocuNest!</h2>
+        <p>Your Smart Document Organizer</p>
+        <form id="upload-form" enctype="multipart/form-data">
+            <input type="file" id="file-input" accept=".pdf,.doc,.docx,.jpg,.png" multiple>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+    <div class="hero-image">
+        <img src="assets\fillingsystem.jpg" alt="Hero Image">
+    </div>
+</section>
 
-        <!-- Sorting Options -->
-        <section id="sorting-section">
-            <h2>Sort Documents</h2>
-            <select id="sort-by">
-                <option value="date">Date</option>
-                <option value="name">Name</option>
-                <option value="type">Type</option>
-            </select>
-        </section>
+            <section id="organize-section">
+                <h2>Organize Documents</h2>
+                <div class="organize-options">
+                    <div class="folders">
+                        <h3>My Folders</h3>
+                        <ul>
+                            <li><a href="#">Personal</a></li>
+                            <li><a href="#">Work</a></li>
+                            <li><a href="#">Projects</a></li>
+                            <!-- Option to Add New Folder -->
+                            <li><button onclick="addNewFolder()">Add New Folder</button></li>
+                            <!-- Option to Delete Folder -->
+                            <li><button onclick="deleteFolder()">Delete Folder</button></li>
+                        </ul>
+                    </div>
+                    <div class="tags">
+                        <h3>Tags</h3>
+                        <ul>
+                            <li><a href="#">Important</a></li>
+                            <li><a href="#">Urgent</a></li>
+                            <li><a href="#">To Review</a></li>
+                            <!-- Option to Edit Tag -->
+                            <li><button onclick="editTag()">Edit Tag</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
-        <!-- Preview and Quick View -->
-        <section id="preview-section">
-            <h2>Document Preview</h2>
-            <div id="preview-pane">
-                <!-- Placeholder for document preview -->
-            </div>
-        </section>
+            <!-- Document Preview Section -->
+            <section id="preview-section">
+                <h2>Document Preview</h2>
+                <div id="preview-pane">
+                    <!-- Placeholder for document preview -->
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 Smart Digital Filing Cabinet</p>
+        <div class="container">
+            <p>&copy; 2024 DocuNest. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
