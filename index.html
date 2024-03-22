@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,28 +14,74 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Documents</a></li>
-                <li><a href="#">Upload</a></li>
                 <li><a href="#">Profile</a></li>
                 <li><a href="#">Logout</a></li>
             </ul>
         </nav>
     </header>
 
-    
     <main>
-        <!-- Document Upload Form -->
-        <section id="upload-section">
-            <h2>Upload Documents</h2>
-            <form id="upload-form">
-                <input type="file" id="file-input" accept=".pdf,.doc,.docx,.jpg,.png" multiple>
-                <button type="submit">Upload</button>
+        <!-- Hero Section with Document Upload -->
+        <section id="hero-section">
+            <div class="hero-content">
+                <h2>Welcome to Smart Digital Filing Cabinet</h2>
+                <p>Effortlessly organize and manage your documents. Upload your files below to get started.</p>
+                <form id="upload-form" enctype="multipart/form-data">
+                    <input type="file" id="file-input" accept=".pdf,.doc,.docx,.jpg,.png" multiple>
+                    <button type="submit">Upload</button>
+                </form>
+            </div>
+            <div class="hero-image">
+                <!-- Insert hero image here -->
+            </div>
+        </section>
+
+        <!-- Search Functionality -->
+        <section id="search-section">
+            <h2>Search Documents</h2>
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="Enter keywords...">
+                <button type="submit">Search</button>
             </form>
         </section>
 
-        <!-- Document Display Section -->
-        <section id="documents-section">
-            <h2>My Documents</h2>
-            <div id="documents-list"></div>
+        <!-- Organizational Tools -->
+        <section id="organize-section">
+            <h2>Organize Documents</h2>
+            <div id="folders">
+                <h3>My Folders</h3>
+                <ul>
+                    <li><a href="#">Personal</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Projects</a></li>
+                </ul>
+            </div>
+            <div id="tags">
+                <h3>Tags</h3>
+                <ul>
+                    <li><a href="#">Important</a></li>
+                    <li><a href="#">Urgent</a></li>
+                    <li><a href="#">To Review</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Sorting Options -->
+        <section id="sorting-section">
+            <h2>Sort Documents</h2>
+            <select id="sort-by">
+                <option value="date">Date</option>
+                <option value="name">Name</option>
+                <option value="type">Type</option>
+            </select>
+        </section>
+
+        <!-- Preview and Quick View -->
+        <section id="preview-section">
+            <h2>Document Preview</h2>
+            <div id="preview-pane">
+                <!-- Placeholder for document preview -->
+            </div>
         </section>
     </main>
 
